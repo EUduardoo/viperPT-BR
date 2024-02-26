@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>EVENT Stats</title>
+<title>Estatísticas do EVENTO</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta charset="UTF-8">
 <link rel=stylesheet href=/main.css>
@@ -21,24 +21,24 @@
 <link rel=icon type=image/png href=/logo.png>
 </head>
 <body>
-<h1>EVENT Match Stats</h1>
-<button class=showInstructions>Instructions</button>
-<button id=markPicked>Mark team as picked</button>
-<button id=viewTeam>View team info</button>
-<button id=sortBy>Sort: <span class=name>Score Contribution</span></button>
-<select id=displayType><option value=graph selected>Graphs</option><option value=table>Table</option></select>
+<h1>Estatísticas de Partidas do EVENTO</h1>
+<button class=showInstructions>Instruções</button>
+<button id=markPicked>Marcar equipe como escolhida</button>
+<button id=viewTeam>Ver informações da equipe</button>
+<button id=sortBy>Ordenar por: <span class=name>Contribuição de Pontuação</span></button>
+<select id=displayType><option value=graph selected>Gráficos</option><option value=table>Tabela</option></select>
 <table id=statsTable></table>
 <div id=statGraphs></div>
-<p>Stats <span class=aggregationIncludesPractice>(include/exclude)</span> practice matches</p>
+<p>Estatísticas <span class=aggregationIncludesPractice>(inclui/exclui)</span> partidas de treino</p>
 <div id=teamStats class=lightBoxFullContent style=display:none><iframe></iframe></div>
 <div id=teamPicker class=lightBoxCenterContent style=display:none></div>
 <div id=sortChooser class=lightBoxFullContent style=display:none></div>
 <div id=clickActions class=lightBoxCenterContent style=display:none></div>
 <iframe id=instructions class=lightBoxFullContent src=/stats-instructions.html></iframe>
 <div id=teamlists>
-	<h4>Pick List</h4>
+	<h4>Lista de Escolha</h4>
 	<ol class="picklist-body sortable-list" id=picklist></ol>
-	<h4 class=picklist-body>No Pick</h4>
+	<h4 class=picklist-body>Sem Escolha</h4>
 	<ol class="picklist-body sortable-list" id=donotpicklist></ol>
 </div>
 </body></html>

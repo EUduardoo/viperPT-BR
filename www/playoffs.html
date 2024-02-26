@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Alliances, Playoffs, Finals</title>
+<title>Alianças, Playoffs, Finais</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel=stylesheet href=/main.css>
@@ -15,25 +15,25 @@
 <link rel=icon type=image/png href=/logo.png>
 </head>
 <body>
-<h1>Alliances, Playoffs, Finals</h1>
+<h1>Alianças, Playoffs, Finais</h1>
 <div class=screen id=alliance-selection style=display:none>
-	<h2>Playoff Brackets</h2>
+	<h2>Quadros de Playoffs</h2>
 	<select id=bracket-type>
-		<option value=double selected>Double elimination</option>
-		<option value=single>Single elimination</option>
+		<option value=double selected>Eliminação Dupla</option>
+		<option value=single>Eliminação Simples</option>
 	</select>
-	<h2>Alliance Selection</h2>
+	<h2>Seleção de Alianças</h2>
 	<table border=1>
-		<thead id=alliancesHead><tr><th>Alliance</th><th>Captain</th><th>First <br>Pick</th><th>Second <br>Pick</th></tr></thead>
+		<thead id=alliancesHead><tr><th>Aliança</th><th>Captain</th><th>Primeira <br>Escolha</th><th>Segunda <br>Escolha</th></tr></thead>
 		<tbody id=alliances></tbody>
 	</table>
 
 	<template id=allianceRow>
 		<tr class=allianceTr>
 			<th>$#</th>
-			<td><input type=text data-alliance="$#" class=captain id="A$#_captain" placeholder="team #" pattern="^[0-9]+$" size=5></td>
-			<td><input type=text data-alliance="$#" class=pick_1 id="A$#_pick_1" placeholder="team #" pattern="^[0-9]+$" size=5></td>
-			<td><input type=text data-alliance="$#" class=pick_2 id="A$#_pick_2" placeholder="team #" pattern="^[0-9]+$" size=5></td>
+			<td><input type=text data-alliance="$#" class=captain id="A$#_captain" placeholder="equipe #" pattern="^[0-9]+$" size=5></td>
+			<td><input type=text data-alliance="$#" class=pick_1 id="A$#_pick_1" placeholder="equipe #" pattern="^[0-9]+$" size=5></td>
+			<td><input type=text data-alliance="$#" class=pick_2 id="A$#_pick_2" placeholder="equipe #" pattern="^[0-9]+$" size=5></td>
 		</tr>
 	</template>
 	<div id=teams></div>
@@ -45,11 +45,11 @@
 <div id=scheduleSection style=display:none>
 	<h2></h2>
 	<table border=1 id=scheduleTable>
-		<thead><tr><th>Match</th><th>R1</th><th>R2</th><th>R3</th><th>B1</th><th>B2</th><th>B3</th></tr></thead>
+		<thead><tr><th>Partida</th><th>R1</th><th>R2</th><th>R3</th><th>B1</th><th>B2</th><th>B3</th></tr></thead>
 		<tbody id=schedule></tbody>
 	</table>
 
-	<button id=save>Save</button>
+	<button id=save>Salvar</button>
 </div>
 
 <form id=addAlliances method=POST action=/admin/playoffs.cgi>
